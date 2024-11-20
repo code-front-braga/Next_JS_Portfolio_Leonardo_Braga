@@ -16,8 +16,9 @@ export default function HeaderMobile() {
     <header
       className={clsx(
         "-h-[100%] fixed z-50 flex h-0 w-full bg-[#0c0c0c] bg-opacity-75 backdrop-blur-sm",
-        showMenu && "h-screen",
-        "transition-all duration-300",
+        showMenu && "h-screen", // open menu
+        "transition-all duration-300", // animação
+        "tablet960px:hidden", // hide menu (min-width: 991px)
       )}
     >
       <div
@@ -50,7 +51,10 @@ export default function HeaderMobile() {
             <MenuItem
               href={link.href}
               key={link.id}
-              className={clsx("font-ubuntuCond text-3xl")}
+              className={clsx(
+                "font-ubuntuCond text-4xl font-normal", // default (min-width: 320px)
+                "mobile414px:text-5xl", // (min-width: 414px)
+              )}
             >
               {link.name}
             </MenuItem>

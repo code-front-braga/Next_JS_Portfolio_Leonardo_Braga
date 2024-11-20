@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { ReactNode } from "react";
+import clsx from "clsx";
 
 type MenuItemProps = {
   children: ReactNode;
@@ -15,7 +16,11 @@ export default function MenuItem({ children, href, className }: MenuItemProps) {
   };
 
   return (
-    <Link href={href} className={className} style={style}>
+    <Link
+      href={href}
+      className={clsx(className, "ease transition-colors duration-700")}
+      style={style}
+    >
       {children}
     </Link>
   );
