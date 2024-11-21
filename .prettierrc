@@ -1,4 +1,15 @@
 {
-  "plugins": ["prettier-plugin-tailwindcss"],
-  "tailwindFunctions": ["clsx"]
+	"plugins": ["prettier-plugin-tailwindcss"],
+	"tailwindFunctions": ["clsx"],
+	"arrowParens": "avoid",
+	"jsxSingleQuote": false,
+	"singleQuote": true,
+	"trailingComma": "all",
+	"useTabs": true,
+	"printWidth": 80,
+	"quoteProps": "as-needed",
+	"bracketSpacing": true,
+	"bracketSameLine": false,
+	"htmlWhitespaceSensitivity": "css",
+	"cursorOffset": -1
 }
