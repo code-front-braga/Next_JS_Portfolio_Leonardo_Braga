@@ -17,14 +17,14 @@ const imgVariants = {
 	},
 };
 
-const textVariants = {
-	hidden: { opacity: 0 },
-	reveal: { opacity: 1 },
-};
-
 const iconsVariants = {
 	initial: { x: 0 },
 	forward: { x: '-190%' },
+};
+
+const textVariants = {
+	hidden: { opacity: 0 },
+	reveal: { opacity: 1 },
 };
 
 const texts = {
