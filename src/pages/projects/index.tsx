@@ -12,29 +12,40 @@ export default function Projects() {
 			</Head>
 
 			<section className={clsx('relative w-full')}>
-				<div className={clsx('relative flex flex-col gap-12 p-6 pt-28')}>
+				<div
+					className={clsx(
+						'relative flex flex-col gap-8 p-6 pt-32',
+						'desktop1024px:pt-40',
+					)}
+				>
 					<h2
 						className={clsx(
-							'relative top-6 text-center font-bebasNeue text-3xl text-orangered', // default (min-width: 320px)
+							'text-center font-bebasNeue text-3xl text-orangered', // default (min-width: 320px)
 							'mobile414px:text-4xl', // (min-width: 414px)
 							'mobile600px:text-5xl', // (min-width: 600px)
-							'desktop1336px:text-8xl', // (min-width: 1336px)
+							'desktop1336px:text-6xl', // (min-width: 1336px)
 						)}
 					>
 						Meus projetos
 					</h2>
-
-					{projects.map(project => (
-						<ProjectCard
-							key={project.id}
-							id={project.id}
-							title={project.title}
-							src={project.src}
-							icons={project.icons}
-							linkDeploy={project.linkDeploy}
-							linkRepo={project.linkRepo}
-						/>
-					))}
+					<div
+						className={clsx(
+							'grid gap-8 desktop1024px:grid desktop1024px:grid-cols-2',
+							'desktop1280px:m-auto desktop1280px:w-[95%] desktop1280px:grid-cols-3',
+						)}
+					>
+						{projects.map(project => (
+							<ProjectCard
+								key={project.id}
+								id={project.id}
+								title={project.title}
+								src={project.src}
+								icons={project.icons}
+								linkDeploy={project.linkDeploy}
+								linkRepo={project.linkRepo}
+							/>
+						))}
+					</div>
 				</div>
 			</section>
 		</>

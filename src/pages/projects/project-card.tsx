@@ -41,7 +41,7 @@ export default function ProjectCard({ ...props }: ProjectCardProps) {
 						alt=""
 						width={20}
 						height={20}
-						className="mobile600px:w-12"
+						className={clsx('mobile600px:w-12', 'desktop1280px:w-9')}
 					/>
 				))}
 			</div>

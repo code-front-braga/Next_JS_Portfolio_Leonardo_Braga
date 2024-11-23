@@ -47,7 +47,7 @@ export default function Home() {
 
 			<section
 				className={clsx(
-					'flex h-screen w-full relative', // default (min-width: 320px)
+					'relative flex h-screen w-full', // default (min-width: 320px)
 				)}
 			>
 				<article
