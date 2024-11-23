@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import Head from 'next/head';
 import { motion } from 'motion/react';
 import { splitText } from '@/lib/utils/split-text';
-import { duplicateIcons } from '../../public/svg/Icons';
+import { duplicateIcons } from '../../public/svg/icons';
 import Image from 'next/image';
 import styles from '../styles/slider-icons.module.css';
 
@@ -47,7 +47,7 @@ export default function Home() {
 
 			<section
 				className={clsx(
-					'flex h-screen w-full', // default (min-width: 320px)
+					'flex h-screen w-full relative', // default (min-width: 320px)
 				)}
 			>
 				<article

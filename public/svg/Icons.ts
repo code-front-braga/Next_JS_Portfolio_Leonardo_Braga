@@ -20,4 +20,16 @@ export const icons = [
 	iconGIT,
 ];
 
+export {
+	iconJS,
+	iconHTML,
+	iconCSS,
+	iconTS,
+	iconSASS,
+	iconVSCODE,
+	iconNEXTJS,
+	iconGITHUB,
+	iconGIT,
+};
+
 export const duplicateIcons = [...icons, ...icons];

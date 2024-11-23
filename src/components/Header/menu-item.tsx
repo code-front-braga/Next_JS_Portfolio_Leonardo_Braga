@@ -7,7 +7,7 @@ type MenuItemProps = {
 	children: ReactNode;
 	href: string;
 	className: string;
-	onClick: () => void;
+	onClick?: () => void;
 };
 
 export default function MenuItem({

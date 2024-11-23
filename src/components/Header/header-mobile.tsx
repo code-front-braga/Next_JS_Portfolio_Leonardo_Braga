@@ -6,9 +6,12 @@ import { FaGithubAlt, FaLinkedin } from 'react-icons/fa';
 import MenuItem from './menu-item';
 import { useState } from 'react';
 import BurgerButton from './burger-button';
+import { useRouter } from 'next/router';
 
 export default function HeaderMobile() {
 	const [showMenu, setShowMenu] = useState<boolean>(false);
+	const router = useRouter();
+	const isProjectPage = router.pathname === '/projects';
 
 	const handleToggleMenu = () => setShowMenu(!showMenu);
 	const handleCloseMenu = () => setShowMenu(false);
@@ -16,15 +19,16 @@ export default function HeaderMobile() {
 	return (
 		<header
 			className={clsx(
-				'-h-[100%] fixed z-50 flex h-0 w-full bg-[#0c0c0c] bg-opacity-75 backdrop-blur-sm',
-				showMenu && 'h-screen', // open menu
+				'fixed z-50 flex h-28 w-full', // default
+				showMenu && 'h-[100%] bg-[#0c0c0c] bg-opacity-90 backdrop-blur-sm', // open menu
+				isProjectPage && 'bg-[#0c0c0c] bg-opacity-25 backdrop-blur-sm', // project page style
 				'transition-all duration-300', // animação
-				'tablet960px:hidden', // hide menu (min-width: 991px)
+				'tablet960px:hidden', // (min-width: 991px)
 			)}
 		>
 			<div
 				className={clsx(
-					'm-auto flex h-[70%] w-[70%] flex-col items-center justify-between',
+					'm-auto flex h-[70%] w-[70%] flex-col items-center justify-between', // default (min-width: 320px)
 					showMenu ? 'flex' : 'hidden',
 				)}
 			>
@@ -45,7 +49,9 @@ export default function HeaderMobile() {
 
 				<nav
 					className={clsx(
-						'gap flex flex-col items-center gap-10 text-orangered',
+						'flex flex-col items-center gap-10 text-orangered', // defaul (min-width: 320px)
+						'mobile480px:gap-14', // (min-width: 480px)
+						'mobile600px:gap-20', // (min-width: 480px)
 					)}
 				>
 					{links.map(link => (

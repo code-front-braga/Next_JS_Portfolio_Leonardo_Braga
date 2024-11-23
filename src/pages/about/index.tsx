@@ -14,7 +14,7 @@ export default function About() {
 				<meta name="description" content="Sobre mim" />
 			</Head>
 
-			<section className="flex h-screen w-full">
+			<section className="relative flex h-screen w-full">
 				<article
 					className={clsx(
 						'm-auto flex h-fit w-[90%] flex-col items-center justify-center gap-2 p-3', // default (min-width: 320px)
