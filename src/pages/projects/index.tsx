@@ -14,8 +14,8 @@ export default function Projects() {
 			<section className={clsx('relative w-full')}>
 				<div
 					className={clsx(
-						'relative flex flex-col gap-8 p-6 pt-32',
-						'desktop1024px:pt-40',
+						'relative flex flex-col gap-8 p-6 pt-32', // default (min-width: 320px)
+						'desktop1024px:pt-40', // (min-width: 1024px)
 					)}
 				>
 					<h2
@@ -30,8 +30,9 @@ export default function Projects() {
 					</h2>
 					<div
 						className={clsx(
-							'grid gap-8 desktop1024px:grid desktop1024px:grid-cols-2',
-							'desktop1280px:m-auto desktop1280px:w-[95%] desktop1280px:grid-cols-3',
+							'grid gap-8', // default (min-width: 320px)
+							'desktop1024px:grid desktop1024px:grid-cols-2', // (min-width: 1024px)
+							'desktop1280px:m-auto desktop1280px:w-[95%] desktop1280px:grid-cols-3', // (min-width: 1280px)
 						)}
 					>
 						{projects.map(project => (

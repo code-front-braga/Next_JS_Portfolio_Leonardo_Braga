@@ -1,3 +1,9 @@
+import Form from './form';
+
 export default function Contact() {
-  return <h1>Contact</h1>
+	return (
+		<section className='relative flex h-screen w-full'>
+			<Form />
+		</section>
+	);
 }
