@@ -1,25 +1,27 @@
 import { links } from '@/lib/utils/links-config';
 import clsx from 'clsx';
-import MenuItem from './menu-item';
+import MenuItem from './menu-link';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaGithubAlt, FaLinkedin } from 'react-icons/fa';
 import { useRouter } from 'next/router';
+import useScrollDetection from './hook/useScrollDetection';
 
 export default function HeaderDesktop() {
 	const router = useRouter();
 	const isProjectPage = router.pathname === '/projects';
+	const isScrolled = useScrollDetection();
 
 	return (
 		<header
-			className={clsx(
-				'fixed z-50 hidden w-full p-12', // hidden (max-width: 960px)
-				'tablet960px:block', // visible (min-width: 960px)
-				isProjectPage && 'bg-[#0c0c0c] bg-opacity-25 backdrop-blur-sm',
-			)}
+			className={clsx('fixed z-50 hidden w-full p-12', 'tablet960px:block', {
+				'bg-[#0c0c0c] bg-opacity-90 shadow-[0_2rem_2rem_#00000098]':
+					isScrolled && isProjectPage,
+				'bg-transparent': !isScrolled && !isProjectPage,
+			})}
 		>
 			<div className="flex justify-between">
-				<div className={clsx('flex items-center gap-4')}>
+				<div className="flex items-center gap-4">
 					<span className="font-rajdhani text-2xl text-white">
 						Desenvolvido por
 					</span>
@@ -38,17 +40,14 @@ export default function HeaderDesktop() {
 						<MenuItem
 							key={link.id}
 							href={link.href}
-							className={clsx(
-								"relative font-ubuntuCond text-4xl before:absolute before:-bottom-3 before:h-1 before:w-0 before:rounded-lg before:bg-[#4ade80] before:content-[''] before:hover:w-full", //default
-								'before:transition-all before:duration-500', // animation
-							)}
+							className="relative font-ubuntuCond text-4xl before:absolute before:-bottom-3 before:h-1 before:w-0 before:rounded-lg before:bg-[#4ade80] before:transition-all before:duration-500 before:content-[''] before:hover:w-full"
 						>
 							{link.name}
 						</MenuItem>
 					))}
 				</nav>
 
-				<div className={clsx('flex items-center gap-6 text-white')}>
+				<div className="flex items-center gap-6 text-white">
 					<Link href="https://github.com/code-front-braga" target="_blank">
 						<FaGithubAlt size={26} />
 					</Link>

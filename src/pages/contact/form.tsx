@@ -1,14 +1,11 @@
-import { ButtonMessageProps } from '@/@types/enums';
 import { zodResolver } from '@hookform/resolvers/zod';
 import clsx from 'clsx';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-import { PulseLoader } from 'react-spinners';
-import { FaEnvelopeCircleCheck } from 'react-icons/fa6';
-import { FaCircleExclamation } from 'react-icons/fa6';
 import useSendEmail from './hook/send-email';
-import { FaEnvelopeOpen } from 'react-icons/fa';
+
 import Modal from './modal';
+import SubmitButton from './submit-button';
 
 const inputsSchema = z.object({
 	userName: z
@@ -60,7 +57,7 @@ export default function Form() {
 				className={clsx(
 					'm-auto mt-32 flex w-[85%] flex-col gap-8 rounded-lg bg-purple-800 bg-opacity-55 p-6',
 					'mobile360px:m-auto',
-					'desktop1024px:w-[40%]',
+					'desktop1024px:w-[40%] desktop1024px:gap-12',
 				)}
 			>
 				<h2
@@ -86,6 +83,7 @@ export default function Form() {
 							'tablet960px:text-3xl',
 							'desktop1024px:text-2xl',
 							'desktop1630px:text-3xl',
+							'desktop1336px:text-4xl',
 						)}
 					>
 						Seu nome
@@ -100,7 +98,12 @@ export default function Form() {
 						)}
 					/>
 					{errors.userName && (
-						<span className="text-state-error absolute left-0 top-full mt-1 text-xl text-orangered">
+						<span
+							className={clsx(
+								'text-state-error absolute left-0 top-full mt-1 text-xl text-orangered',
+								'desktop1336px:text-2xl desktop1336px:tracking-wider',
+							)}
+						>
 							{errors.userName.message}
 						</span>
 					)}
@@ -118,6 +121,7 @@ export default function Form() {
 							'tablet960px:text-3xl',
 							'desktop1024px:text-2xl',
 							'desktop1630px:text-3xl',
+							'desktop1336px:text-4xl',
 						)}
 					>
 						Seu email
@@ -132,7 +136,12 @@ export default function Form() {
 						)}
 					/>
 					{errors.email && (
-						<span className="text-state-error absolute left-0 top-full mt-1 text-xl text-orangered">
+						<span
+							className={clsx(
+								'text-state-error absolute left-0 top-full mt-1 text-xl text-orangered',
+								'desktop1336px:text-2xl desktop1336px:tracking-wider',
+							)}
+						>
 							{errors.email.message}
 						</span>
 					)}
@@ -150,6 +159,7 @@ export default function Form() {
 							'tablet960px:text-3xl',
 							'desktop1024px:text-2xl',
 							'desktop1630px:text-3xl',
+							'desktop1336px:text-4xl',
 						)}
 					>
 						Digite sua mensagem
@@ -166,54 +176,21 @@ export default function Form() {
 						placeholder="em que posso ajudar?"
 					/>
 					{errors.message && (
-						<span className="text-state-error absolute left-0 top-full mt-1 text-xl text-orangered">
+						<span
+							className={clsx(
+								'text-state-error absolute left-0 top-full mt-1 text-xl text-orangered',
+								'desktop1336px:text-2xl desktop1336px:tracking-wider',
+							)}
+						>
 							{errors.message.message}
 						</span>
 					)}
 				</div>
-				<button
-					type="submit"
-					disabled={isEmailSending}
-					className={clsx(
-						'relative mt-4 flex items-center justify-center rounded-md bg-white p-5 font-ubuntuCond text-2xl text-purple-800',
-						'tablet960px:text-3xl',
-					)}
-				>
-					{isEmailSending ? (
-						<>
-							{ButtonMessageProps.TEXT_SENDING}
-							<PulseLoader
-								size={6}
-								color="#ff4500"
-								className="absolute right-8"
-							/>
-						</>
-					) : isEmailError ? (
-						<>
-							{ButtonMessageProps.TEXT_ERROR}
-							<FaCircleExclamation
-								size={16}
-								className="absolute right-8 text-red-500"
-							/>
-						</>
-					) : isEmailSent ? (
-						<>
-							{ButtonMessageProps.TEXT_SUCCESSFULL}
-							<FaEnvelopeCircleCheck
-								size={16}
-								className="absolute right-8 text-green-500"
-							/>
-						</>
-					) : (
-						<>
-							{ButtonMessageProps.TEXT_DEFAULT}
-							<FaEnvelopeOpen
-								size={16}
-								className="absolute right-8 text-orangered"
-							/>
-						</>
-					)}
-				</button>
+				<SubmitButton
+					isEmailSending={isEmailSending}
+					isEmailSent={isEmailSent}
+					isEmailError={isEmailError}
+				/>
 			</form>
 			<Modal
 				isEmailSent={isEmailSent}

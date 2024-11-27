@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export type ProjectCardProps = {
+type ProjectCardProps = {
 	id: string;
 	title: string;
 	src: string;
@@ -13,11 +13,7 @@ export type ProjectCardProps = {
 
 export default function ProjectCard({ ...props }: ProjectCardProps) {
 	return (
-		<div
-			className={clsx(
-				'flex flex-col gap-3 rounded-lg bg-purple-800 bg-opacity-20 p-6',
-			)}
-		>
+		<div className="flex flex-col gap-3 rounded-lg bg-purple-800 bg-opacity-20 p-6">
 			<h2
 				className={clsx(
 					'text-center font-rajdhani text-2xl text-[#8bffa3]',

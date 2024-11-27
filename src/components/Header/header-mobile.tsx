@@ -3,39 +3,45 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaGithubAlt, FaLinkedin } from 'react-icons/fa';
-import MenuItem from './menu-item';
+import MenuItem from './menu-link';
 import { useState } from 'react';
 import BurgerButton from './burger-button';
 import { useRouter } from 'next/router';
+import useScrollDetection from './hook/useScrollDetection';
 
 export default function HeaderMobile() {
 	const [showMenu, setShowMenu] = useState<boolean>(false);
 	const router = useRouter();
 	const isProjectPage = router.pathname === '/projects';
+	const isScrolled = useScrollDetection();
 
 	const handleToggleMenu = () => setShowMenu(!showMenu);
-	const handleCloseMenu = () => setShowMenu(false);
+	const handleCloseMenuByLink = () => setShowMenu(false);
 
 	return (
 		<header
 			className={clsx(
-				'fixed z-50 flex h-28 w-full', // default
-				showMenu && 'h-[100%] bg-[#0c0c0c] bg-opacity-90 backdrop-blur-sm', // open menu
-				isProjectPage && 'bg-[#0c0c0c] bg-opacity-25 backdrop-blur-sm', // project page style
-				'transition-all duration-300', // animação
-				'tablet960px:hidden', // (min-width: 991px)
+				'fixed z-50 flex h-28 w-full transition-all duration-300',
+				'tablet960px:hidden',
+				{
+					'h-[100%] bg-[#0c0c0c] bg-opacity-90 backdrop-blur-sm': showMenu,
+					'bg-[#0c0c0c] bg-opacity-90 shadow-[0_2rem_2rem_#00000098]':
+						isScrolled && isProjectPage,
+					'bg-transparent': !isScrolled && !showMenu && !isProjectPage,
+				},
 			)}
 		>
 			<div
 				className={clsx(
-					'm-auto flex h-[70%] w-[70%] flex-col items-center justify-between', // default (min-width: 320px)
-					showMenu ? 'flex' : 'hidden',
+					'm-auto flex h-[70%] w-[70%] flex-col items-center justify-between',
+					{
+						flex: showMenu,
+						hidden: !showMenu,
+					},
 				)}
 			>
-				<div className={clsx('flex items-center gap-4')}>
-					<span
-						className={clsx('font-rajdhani text-2xl tracking-wider text-white')}
-					>
+				<div className="flex items-center gap-4">
+					<span className="font-rajdhani text-2xl tracking-wider text-white">
 						Desenvolvido por
 					</span>
 					<Image
@@ -43,25 +49,24 @@ export default function HeaderMobile() {
 						alt="Logo: {lb.};"
 						width={28}
 						height={28}
-						className={clsx()}
 					/>
 				</div>
 
 				<nav
 					className={clsx(
-						'flex flex-col items-center gap-10 text-orangered', // defaul (min-width: 320px)
-						'mobile480px:gap-14', // (min-width: 480px)
-						'mobile600px:gap-20', // (min-width: 480px)
+						'flex flex-col items-center gap-10 text-orangered',
+						'mobile480px:gap-14',
+						'mobile600px:gap-20',
 					)}
 				>
 					{links.map(link => (
 						<MenuItem
 							href={link.href}
-							onClick={handleCloseMenu}
+							onClick={handleCloseMenuByLink}
 							key={link.id}
 							className={clsx(
-								'font-ubuntuCond text-4xl font-normal', // default (min-width: 320px)
-								'mobile414px:text-5xl', // (min-width: 414px)
+								'font-ubuntuCond text-4xl font-normal',
+								'mobile414px:text-5xl',
 							)}
 						>
 							{link.name}
@@ -69,7 +74,7 @@ export default function HeaderMobile() {
 					))}
 				</nav>
 
-				<div className={clsx('flex items-center gap-6 text-white')}>
+				<div className="flex items-center gap-6 text-white">
 					<Link href="https://github.com/code-front-braga" target="_blank">
 						<FaGithubAlt size={26} />
 					</Link>

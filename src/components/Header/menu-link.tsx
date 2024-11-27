@@ -10,7 +10,7 @@ type MenuItemProps = {
 	onClick?: () => void;
 };
 
-export default function MenuItem({
+export default function MenuLink({
 	children,
 	href,
 	className,
