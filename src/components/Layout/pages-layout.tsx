@@ -1,17 +1,20 @@
 import { bebasNeue, odibee, rajdhani, ubuntuCond } from '@/lib/fonts/fonts';
 import clsx from 'clsx';
-import { ReactNode } from 'react';
-import Header from '../Header';
 import BackgroundLayout from './background-layout';
+import { useRouter } from 'next/router';
+import Header from '../Header';
 
 type LayoutProps = {
-	children: ReactNode;
+	children: React.ReactNode;
 };
 
 export default function PagesLayout({ children }: LayoutProps) {
+	const router = useRouter();
+
+	const isErrorPage = router.pathname === '/404';
+
 	return (
 		<>
-			<Header />
 			<main
 				className={clsx(
 					'relative min-h-screen w-full',
@@ -21,6 +24,7 @@ export default function PagesLayout({ children }: LayoutProps) {
 					odibee.className,
 				)}
 			>
+				{!isErrorPage && <Header />}
 				<BackgroundLayout />
 				{children}
 			</main>
