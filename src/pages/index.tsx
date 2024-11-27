@@ -45,26 +45,22 @@ export default function Home() {
 				<meta name="description" content="Página Incial" />
 			</Head>
 
-			<section
-				className={clsx(
-					'relative flex h-screen w-full', // default (min-width: 320px)
-				)}
-			>
+			<section className="relative flex h-screen w-full">
 				<article
 					className={clsx(
-						'm-auto flex h-[75%] w-[90%] flex-col items-center justify-center gap-8', // default (min-width: 320px)
-						'mobile414px:gap-16', // (min-width: 414px)
-						'mobile600px:justify-evenly mobile600px:gap-0', // (min-width: 600px)
+						'm-auto flex h-[75%] w-[90%] flex-col items-center justify-center gap-8',
+						'mobile414px:gap-16',
+						'mobile600px:justify-evenly mobile600px:gap-0',
 					)}
 				>
 					<div
 						className={clsx(
-							'h-[40%] w-[50%] overflow-hidden rounded-full bg-orangered outline outline-1 outline-offset-4 outline-orangered', // default (min-width: 320px)
-							'mobile414px:h-[36%] mobile414px:w-[64%]', // (min-width: 414px)
-							'mobile480px:h-[42%]', // (min-width: 480px)
-							'mobile600px:w-[60%]', // (min-width: 600px)
-							'tablet768px:w-[70%]', // (min-width: 768px)
-							'desktop1024px:h-[50%]', // default (min-width: 1024px)
+							'h-[40%] w-[50%] overflow-hidden rounded-full bg-orangered outline outline-1 outline-offset-4 outline-orangered',
+							'mobile414px:h-[36%] mobile414px:w-[64%]',
+							'mobile480px:h-[42%]',
+							'mobile600px:w-[60%]',
+							'tablet768px:w-[70%]',
+							'desktop1024px:h-[50%]',
 						)}
 					>
 						<motion.img
@@ -74,16 +70,14 @@ export default function Home() {
 							transition={{ duration: 1.2, delay: 0.8, ease: 'backOut' }}
 							src="/my-photo.png"
 							alt="Homem branco (Criador do site), cabelo breto e mão esquerda no queixo de aparência neutra."
-							className={clsx(
-								'h-full w-full object-contain drop-shadow-[-.7rem_.6rem_1.8rem_#000]', // default (min-width: 320px)
-							)}
+							className="h-full w-full object-contain drop-shadow-[-.7rem_.6rem_1.8rem_#000]"
 						/>
 					</div>
 
 					<div
 						className={clsx(
-							'flex w-[80%] flex-col border-l-2 p-6', // default (min-width: 320px)
-							'tablet960px:gap-4 tablet960px:border-r-2 tablet960px:text-center', // (min-width: 960px)
+							'flex w-[80%] flex-col border-l-2 p-6',
+							'tablet960px:gap-4 tablet960px:border-r-2 tablet960px:text-center',
 						)}
 					>
 						<motion.h3
@@ -98,9 +92,9 @@ export default function Home() {
 									variants={textVariants}
 									transition={{ duration: 0.8 }}
 									className={clsx(
-										'text-5xl text-orangered', // default (min-width: 320px)
-										'mobile480px:text-6xl', // default (min-width: 480px)
-										'desktop1024px:text-5xl', // default (min-width: 1024px)
+										'text-5xl text-orangered',
+										'mobile480px:text-6xl',
+										'desktop1024px:text-5xl',
 									)}
 								>
 									{text}
@@ -119,10 +113,13 @@ export default function Home() {
 									variants={textVariants}
 									transition={{ duration: 0.8 }}
 									className={clsx(
-										'font-bebasNeue text-6xl', // default (min-width: 320px)
-										index >= 7 ? 'text-purple-600' : 'text-white',
-										'mobile480px:text-7xl', // (min-width: 480px)
-										'desktop1024px:text-6xl', // default (min-width: 1024px)
+										'font-bebasNeue text-6xl',
+										{
+											'text-purple-600': index >= 7,
+											'text-white': index < 7,
+										},
+										'mobile480px:text-7xl',
+										'desktop1024px:text-6xl',
 									)}
 								>
 									{text}
@@ -142,9 +139,12 @@ export default function Home() {
 									key={text}
 									variants={textVariants}
 									className={clsx(
-										'font-rajdhani text-2xl tracking-wide', // default (min-width: 320px)
-										index >= 14 ? 'font-bold text-orangered' : 'text-white',
-										'mobile600px:text-3xl', // (min-width: 600px)
+										'font-rajdhani text-2xl tracking-wide',
+										{
+											'font-bold text-orangered': index >= 14,
+											'text-white': index < 14,
+										},
+										'mobile600px:text-3xl',
 									)}
 								>
 									{text}
@@ -154,12 +154,7 @@ export default function Home() {
 					</div>
 				</article>
 
-				<div
-					className={clsx(
-						styles.slider,
-						'bg-purple-800 bg-opacity-20', // default (min-width: 320px)
-					)}
-				>
+				<div className={clsx(styles.slider, 'bg-purple-800 bg-opacity-20')}>
 					<motion.div
 						initial="initial"
 						animate="forward"

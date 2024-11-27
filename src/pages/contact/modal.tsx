@@ -38,7 +38,10 @@ export default function Modal({ onClose, isEmailSent, showModal }: ModalProps) {
 				className={clsx(
 					'relative flex w-[90%] flex-col gap-2 rounded-3xl border-l-4 border-r-4 bg-white p-3 shadow-[0_0_2.6rem_#000]',
 					'tablet768px:w-[40rem]',
-					isEmailSent ? 'border-green-500' : 'border-red-500',
+					{
+						'border-green-500': isEmailSent,
+						'border-red-500': !isEmailSent,
+					},
 				)}
 			>
 				<h3 className="flex w-full items-center justify-between font-rajdhani text-2xl font-bold text-purple-800">

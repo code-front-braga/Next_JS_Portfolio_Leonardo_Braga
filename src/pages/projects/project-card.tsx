@@ -15,13 +15,13 @@ export default function ProjectCard({ ...props }: ProjectCardProps) {
 	return (
 		<div
 			className={clsx(
-				'flex flex-col gap-3 rounded-lg bg-purple-800 bg-opacity-20 p-6', // default (min-width: 320px)
+				'flex flex-col gap-3 rounded-lg bg-purple-800 bg-opacity-20 p-6',
 			)}
 		>
 			<h2
 				className={clsx(
-					'text-center font-rajdhani text-2xl text-[#8bffa3]', // default (min-width: 320px)
-					'mobile600px:text-3xl', // (min-width: 600px)
+					'text-center font-rajdhani text-2xl text-[#8bffa3]',
+					'mobile600px:text-3xl',
 				)}
 			>
 				{props.title}
@@ -47,8 +47,8 @@ export default function ProjectCard({ ...props }: ProjectCardProps) {
 			</div>
 			<nav
 				className={clsx(
-					'flex flex-col items-center gap-2 rounded-md border p-2 font-rajdhani text-2xl text-white underline underline-offset-4', // default (min-width: 320px)
-					'mobile600px:text-3xl', // (min-width: 600px)
+					'flex flex-col items-center gap-2 rounded-md border p-2 font-rajdhani text-2xl text-white underline underline-offset-4',
+					'mobile600px:text-3xl',
 				)}
 			>
 				<Link href={props.linkDeploy}>Deploy do projeto</Link>

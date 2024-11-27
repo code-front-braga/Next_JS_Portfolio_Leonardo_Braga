@@ -184,7 +184,8 @@ export default function Form() {
 							{ButtonMessageProps.TEXT_SENDING}
 							<PulseLoader
 								size={6}
-								className="absolute right-8 text-orangered"
+								color="#ff4500"
+								className="absolute right-8"
 							/>
 						</>
 					) : isEmailError ? (

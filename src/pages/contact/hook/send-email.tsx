@@ -13,7 +13,7 @@ export default function useSendEmail() {
 	const handleEmail = (data: IInputsForm) => {
 		setIsEmailSending(true);
 		setIsEmailSent(false);
-		// setShowModal(false);
+		setShowModal(false);
 
 		const templateParams = {
 			from_name: data.userName,

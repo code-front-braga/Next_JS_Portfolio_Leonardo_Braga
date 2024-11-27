@@ -17,21 +17,21 @@ export default function About() {
 			<section className="relative flex h-screen w-full">
 				<article
 					className={clsx(
-						'm-auto flex h-fit w-[90%] flex-col items-center justify-center gap-2 p-3', // default (min-width: 320px)
-						'mobile414px:gap-8', // (min-width: 414px)
-						'tablet960px:rounded-2xl tablet960px:bg-purple-800 tablet960px:bg-opacity-45 tablet960px:p-6', // (min-width: 960px)
-						'desktop1024px:w-[65%] desktop1024px:flex-row desktop1024px:gap-12', // (min-width: 1024px)
+						'm-auto flex h-fit w-[90%] flex-col items-center justify-center gap-2 p-3',
+						'mobile414px:gap-8',
+						'tablet960px:rounded-2xl tablet960px:bg-purple-800 tablet960px:bg-opacity-45 tablet960px:p-6',
+						'desktop1024px:w-[65%] desktop1024px:flex-row desktop1024px:gap-12',
 					)}
 				>
 					<h2
 						className={clsx(
 							'flex gap-1 font-bebasNeue text-3xl tracking-wider text-orangered',
-							'mobile414px:text-4xl', // (min-width: 414px)
-							'mobile600px:gap-2 mobile600px:text-5xl', // (min-width: 600px)
-							'tablet960px:text-6xl', // (min-width: 960px)
-							'desktop1024px:flex-col desktop1024px:text-end', // (min-width: 1024px)
-							'desktop1280px:w-[20%] desktop1280px:text-center', // (min-width: 1280px)
-							'desktop1336px:text-end desktop1336px:text-8xl', // (min-width: 1336px)
+							'mobile414px:text-4xl',
+							'mobile600px:gap-2 mobile600px:text-5xl',
+							'tablet960px:text-6xl',
+							'desktop1024px:flex-col desktop1024px:text-end',
+							'desktop1280px:w-[20%] desktop1280px:text-center',
+							'desktop1336px:text-end desktop1336px:text-8xl',
 						)}
 					>
 						{aboutMeContent.question.map(text => (
@@ -41,12 +41,12 @@ export default function About() {
 					<p
 						className={clsx(
 							'text-justify font-ubuntuCond text-2xl leading-9 text-white',
-							'mobile414px:text-3xl', // (min-width: 414px)
-							'mobile600px:text-4xl', // (min-width: 600px)
-							'tablet768px:leading-[2.6rem]', // (min-width: 768px)
-							'desktop1024px:text-3xl', // (min-width: 1024px)
-							'desktop1280px:w-[80%]', // (min-width: 1280px)
-							'desktop1336px:text-4xl', // (min-width: 1336px)
+							'mobile414px:text-3xl',
+							'mobile600px:text-4xl',
+							'tablet768px:leading-[2.6rem]',
+							'desktop1024px:text-3xl',
+							'desktop1280px:w-[80%]',
+							'desktop1336px:text-4xl',
 						)}
 					>
 						{aboutMeContent.text}
