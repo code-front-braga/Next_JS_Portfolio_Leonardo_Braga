@@ -43,6 +43,10 @@ export default function Home() {
 			<Head>
 				<title>Página Inicial | Leonardo Braga</title>
 				<meta name="description" content="Página Incial" />
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=1 minimum-scale=1"
+				/>
 			</Head>
 
 			<section className="relative flex h-screen w-full">

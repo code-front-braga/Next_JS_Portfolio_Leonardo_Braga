@@ -2,43 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-
 *,
 *::after,
 *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  user-select: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	user-select: none;
 }
 
 html {
-  font-size: 62.5%;
+	font-size: 62.5%;
 }
 
 ul,
 ol,
 nav {
-  list-style: none;
+	list-style: none;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 button {
-  cursor: pointer;
-  border: none;
+	cursor: pointer;
+	border: none;
 }
 
 input,
 textarea {
-  border: none;
-  outline: none;
-  resize: none;
+	border: none;
+	outline: none;
+	resize: none;
 }
 
 img {
-  display: block;
-  max-width: 100%;
+	display: block;
+	max-width: 100%;
 }
