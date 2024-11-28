@@ -4,8 +4,8 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import useSendEmail from '../../lib/useSendEmail';
 
-import Modal from './modal';
-import SubmitButton from './submit-button';
+import Modal from '../Modal/modal';
+import SubmitButton from '../Button/submit-button';
 
 const inputsSchema = z.object({
 	userName: z

@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import Head from 'next/head';
-import ProjectCard from './project-card';
+import ProjectCard from '../../components/Card/project-card';
 import { projects } from '@/lib/utils/projects-data';
 
 export default function Projects() {

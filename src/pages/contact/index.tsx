@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Form from './form';
+import Form from '../../components/Form/form';
 
 export default function Contact() {
 	return (
