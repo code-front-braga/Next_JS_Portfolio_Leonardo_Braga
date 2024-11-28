@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaGithubAlt, FaLinkedin } from 'react-icons/fa';
 import { useRouter } from 'next/router';
-import useScrollDetection from './hook/useScrollDetection';
+import useScrollDetection from '../../lib/useScrollDetection';
 
 export default function HeaderDesktop() {
 	const router = useRouter();

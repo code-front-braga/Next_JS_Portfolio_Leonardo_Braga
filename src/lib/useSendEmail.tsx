@@ -2,7 +2,7 @@
 
 import emailjs from '@emailjs/browser';
 import { useState } from 'react';
-import { IInputsForm } from '../form';
+import { IInputsForm } from '../pages/contact/form';
 
 export default function useSendEmail() {
 	const [isEmailSending, setIsEmailSending] = useState<boolean>(false);
@@ -37,7 +37,7 @@ export default function useSendEmail() {
 				setIsEmailSent(false);
 				setIsEmailError(true);
 				setShowModal(true);
-				throw new Error('Falha no envio do email', err);
+				console.log('Falha no envio do email', err);
 			})
 			.finally(() => {
 				setIsEmailSending(false);

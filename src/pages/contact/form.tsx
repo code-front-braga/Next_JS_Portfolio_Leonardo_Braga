@@ -2,7 +2,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import clsx from 'clsx';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-import useSendEmail from './hook/send-email';
+import useSendEmail from '../../lib/useSendEmail';
 
 import Modal from './modal';
 import SubmitButton from './submit-button';
@@ -94,6 +94,7 @@ export default function Form() {
 						className={clsx(
 							'rounded-md p-4 font-rajdhani text-2xl',
 							'desktop1024px:p-5',
+							'desktop1336px:text-3xl',
 							'desktop1630px:p-7',
 						)}
 					/>
@@ -132,6 +133,7 @@ export default function Form() {
 						className={clsx(
 							'rounded-md p-4 font-rajdhani text-2xl',
 							'desktop1024px:p-5',
+							'desktop1336px:text-3xl',
 							'desktop1630px:p-7',
 						)}
 					/>
@@ -170,8 +172,8 @@ export default function Form() {
 							'h-44 rounded-md p-4 font-rajdhani text-2xl',
 							'mobile600px:h-60',
 							'desktop1024px:h-44',
-							'desktop1630px:h-64',
-							'desktop1630px:p-7',
+							'desktop1336px:text-3xl',
+							'desktop1630px:h-64 desktop1630px:p-7',
 						)}
 						placeholder="em que posso ajudar?"
 					/>
@@ -192,6 +194,7 @@ export default function Form() {
 					isEmailError={isEmailError}
 				/>
 			</form>
+
 			<Modal
 				isEmailSent={isEmailSent}
 				showModal={showModal}
