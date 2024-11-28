@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import Head from 'next/head';
 import { motion } from 'motion/react';
 import { splitText } from '@/lib/utils/split-text';
-import { duplicateIcons } from '../../public/svg/icons';
+import { duplicateIcons } from '../lib/utils/icons';
 import Image from 'next/image';
 import styles from '../styles/slider-icons.module.css';
 

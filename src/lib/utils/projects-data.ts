@@ -7,7 +7,7 @@ import {
 	iconGITHUB,
 	iconVSCODE,
 	iconCSS,
-} from '../../../public/svg/icons';
+} from './icons';
 
 export const projects = [
 	{
