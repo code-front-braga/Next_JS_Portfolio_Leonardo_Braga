@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 import { splitText } from '@/lib/utils/split-text';
 import { duplicateIcons } from '../lib/utils/icons';
 import Image from 'next/image';
-import styles from '../styles/slider-icons.module.css';
+import slider from '../styles/slider-icons.module.css';
 
 const imgVariants = {
 	initial: {
@@ -55,7 +55,7 @@ export default function Home() {
 				>
 					<div
 						className={clsx(
-							'h-[40%] w-[50%] overflow-hidden rounded-full bg-orangered outline outline-1 outline-offset-4 outline-orangered',
+							'relative h-[40%] w-[50%] transform overflow-hidden rounded-full bg-orangered outline outline-1 outline-offset-4 outline-orangered',
 							'mobile414px:h-[36%] mobile414px:w-[64%]',
 							'mobile480px:h-[42%]',
 							'mobile600px:w-[60%]',
@@ -70,7 +70,10 @@ export default function Home() {
 							transition={{ duration: 1.2, delay: 0.8, ease: 'backOut' }}
 							src="/my-photo.png"
 							alt="Homem branco (Criador do site), cabelo breto e mão esquerda no queixo de aparência neutra."
-							className={clsx("h-full w-full object-cover drop-shadow-[-.7rem_.6rem_1.8rem_#000]", "tablet768px:object-contain")}
+							className={clsx(
+								'absolute h-full w-full -translate-x-[10%] object-cover drop-shadow-[-.7rem_.6rem_1.8rem_#000]',
+								'tablet768px:object-contain',
+							)}
 						/>
 					</div>
 
@@ -154,13 +157,13 @@ export default function Home() {
 					</div>
 				</article>
 
-				<div className={clsx(styles.slider, 'bg-purple-800 bg-opacity-20')}>
+				<div className={clsx(slider.slider, 'bg-purple-800 bg-opacity-20')}>
 					<motion.div
 						initial="initial"
 						animate="forward"
 						variants={iconsVariants}
 						transition={{ duration: 4, ease: 'linear', repeat: Infinity }}
-						className={styles['slide-track']}
+						className={slider['slide-track']}
 					>
 						{duplicateIcons.map((icon, index) => (
 							<Image
