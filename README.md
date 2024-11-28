@@ -1,6 +1,6 @@
 # Meu Site Pessoal
 
-<img src='/print-project.png' alt='Print do Projeto' />
+<img src='/public/print-project.png' alt='Print do Projeto' />
 
 Bem-vindo ao repositório do meu site pessoal! Este projeto tem como objetivo apresentar minhas informações, habilidades e projetos, bem como oferecer uma forma de contato.
 Navegue pelo site para conhecer mais sobre mim!
@@ -89,5 +89,5 @@ Este projeto está licenciado sob a licença MIT.
 ## 🧑🏻‍💻 Autor:
 
 <a href="https://github.com/code-front-braga" style="text-align: justify;">
-<img src="/Ab-6.svg" alt="Logo" style="width: 160px;">
+<img src="/public/svg/Ab-6.svg" alt="Logo" style="width: 160px;">
 </a>
