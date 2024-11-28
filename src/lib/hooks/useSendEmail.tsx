@@ -2,7 +2,7 @@
 
 import emailjs from '@emailjs/browser';
 import { useState } from 'react';
-import { IInputsForm } from '../components/Form/form';
+import { IInputsForm } from '../../components/Form/form';
 
 export default function useSendEmail() {
 	const [isEmailSending, setIsEmailSending] = useState<boolean>(false);

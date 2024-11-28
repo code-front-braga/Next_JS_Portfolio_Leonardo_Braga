@@ -2,7 +2,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import clsx from 'clsx';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
-import useSendEmail from '../../lib/useSendEmail';
+import useSendEmail from '../../lib/hooks/useSendEmail';
 
 import Modal from '../Modal/modal';
 import SubmitButton from '../Button/submit-button';

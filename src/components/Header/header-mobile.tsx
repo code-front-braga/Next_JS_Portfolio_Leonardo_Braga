@@ -7,7 +7,7 @@ import MenuItem from './menu-link';
 import { useState } from 'react';
 import BurgerButton from './burger-button';
 import { useRouter } from 'next/router';
-import useScrollDetection from '../../lib/useScrollDetection';
+import useScrollDetection from '../../lib/hooks/useScrollDetection';
 
 export default function HeaderMobile() {
 	const [showMenu, setShowMenu] = useState<boolean>(false);
