@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import Head from 'next/head';
-import { aboutMeContent } from './constants';
+import { aboutMeContent } from '../../lib/utils/constants';
 
 export default function About() {
 	return (
