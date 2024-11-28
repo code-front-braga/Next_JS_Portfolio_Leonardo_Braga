@@ -1,6 +1,6 @@
 export enum ModalMessageProps {
 	TITLE_SUCCESSFULL = 'Mensagem Enviada',
-	SUBTITLE_SUCCESSFULL = 'Entraremos em contato em breve.',
+	SUBTITLE_SUCCESSFULL = 'Entrarei em contato em breve.',
 
 	TITLE_ERROR = 'Erro no envio da mensagem',
 	SUBTITLE_ERROR = 'Por favor, tente novamente.',

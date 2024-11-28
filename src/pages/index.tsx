@@ -70,7 +70,7 @@ export default function Home() {
 							transition={{ duration: 1.2, delay: 0.8, ease: 'backOut' }}
 							src="/my-photo.png"
 							alt="Homem branco (Criador do site), cabelo breto e mão esquerda no queixo de aparência neutra."
-							className="h-full w-full object-contain drop-shadow-[-.7rem_.6rem_1.8rem_#000]"
+							className={clsx("h-full w-full object-cover drop-shadow-[-.7rem_.6rem_1.8rem_#000]", "tablet768px:object-contain")}
 						/>
 					</div>
 
