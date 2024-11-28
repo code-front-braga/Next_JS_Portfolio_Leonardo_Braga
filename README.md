@@ -1,40 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Meu Site Pessoal
 
-## Getting Started
+<img src='/print-project.png' alt='Print do Projeto' />
 
-First, run the development server:
+Bem-vindo ao repositório do meu site pessoal! Este projeto tem como objetivo apresentar minhas informações, habilidades e projetos, bem como oferecer uma forma de contato.
+Navegue pelo site para conhecer mais sobre mim!
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 📚 Páginas:
+
+### **1. Início:**
+
+Página inicial do site com uma introdução breve e links para as demais seções.
+
+### **2. Sobre:**
+
+Saiba um pouco sobre como ingressei nesse universo.
+
+### **3. Projetos:**
+
+Uma galeria dos meus principais projetos, com descrições, tecnologias utilizadas e links para os repositórios no GitHub e deploys na Vercel.
+
+### **4. Contato:**
+
+Um formulário simples para facilitar o contato direto, além do link para falar comigo no whatsapp.
+
+---
+
+## 🚀 Tecnologias utilizadas:
+
+- **Next.js (pages router)** - Framework para React para aplicações web modernas.
+- **React** - Biblioteca JavaScript para construção de interfaces de usuário.
+- **Tailwind CSS** - Framework de utilitários para estilização rápida e eficiente.
+- **Framer Motion** - Biblioteca para animações em React.
+- **EmailJS** - Serviço para envio de emails diretamente do cliente.
+- **clsx** - Utilitário para manipulação condicional de classes CSS.
+- **TypeScript** - Superset do JavaScript que adiciona tipagem estática.
+- **Zod** - Biblioteca para validação de dados e esquemas.
+- **React Hook Form** - Biblioteca para gerenciamento de formulários no React com validação integrada.
+
+---
+
+## 📋 Pré-requisitos:
+
+- Node.js instalado (versão 16 ou superior).
+- React e react-router-dom versão 18.3.1
+- Gerenciador de pacotes npm
+
+---
+
+## ⚙️ Instalação e Execução:
+
+1. Clone o repositório
+
+```
+git clone git@github.com:code-front-braga/Next_JS_Portfolio_Leonardo_Braga.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Navegue até a pasta do projeto
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+3. Instale as dependências
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```
+npm i
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+4. Inicie o servidor de desenvolvimento
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+npm run dev
+```
 
-## Learn More
+5. Acesse no navegador
 
-To learn more about Next.js, take a look at the following resources:
+```
+http:localhost/3000
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+6. Deploy Vercel
+   [Meu Site Pessoal](https://next-js-portfolio-leonardo-braga.vercel.app)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📝 Licença:
 
-## Deploy on Vercel
+Este projeto está licenciado sob a licença MIT.
+<br>
+<br>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🧑🏻‍💻 Autor:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+<a href="https://github.com/code-front-braga" style="text-align: justify;">
+<img src="/Ab-6.svg" alt="Logo" style="width: 160px;">
+</a>
