@@ -55,7 +55,8 @@ export default function Home() {
 				>
 					<div
 						className={clsx(
-							'relative flex h-[40%] w-[50%]',
+							'relative h-[40%] w-[50%] transform overflow-hidden rounded-full bg-orangered outline outline-1 outline-offset-4 outline-orangered',
+							slider['translate-z'],
 							'mobile414px:h-[36%] mobile414px:w-[64%]',
 							'mobile480px:h-[42%]',
 							'mobile600px:w-[60%]',
@@ -63,29 +64,18 @@ export default function Home() {
 							'desktop1024px:h-[50%]',
 						)}
 					>
-						<div
+						<motion.img
+							variants={imgVariants}
+							initial="initial"
+							animate="finish"
+							transition={{ duration: 1.2, delay: 0.8, ease: 'backOut' }}
+							src="/my-photo.png"
+							alt="Homem branco (Criador do site), cabelo breto e mão esquerda no queixo de aparência neutra."
 							className={clsx(
-								'm-auto flex h-full w-full transform !overflow-hidden rounded-full bg-orangered outline outline-1 outline-offset-4 outline-orangered',
-								// 'mobile414px:h-[36%] mobile414px:w-[64%]',
-								// 'mobile480px:h-[42%]',
-								// 'mobile600px:w-[60%]',
-								// 'tablet768px:w-[70%]',
-								// 'desktop1024px:h-[50%]',
+								'fixed -z-10 h-full w-full object-cover drop-shadow-[-.7rem_.6rem_1.8rem_#000]',
+								'tablet768px:object-contain',
 							)}
-						>
-							<motion.img
-								variants={imgVariants}
-								initial="initial"
-								animate="finish"
-								transition={{ duration: 1.2, delay: 0.8, ease: 'backOut' }}
-								src="/my-photo.png"
-								alt="Homem branco (Criador do site), cabelo breto e mão esquerda no queixo de aparência neutra."
-								className={clsx(
-									'fixed h-full w-full object-cover drop-shadow-[-.7rem_.6rem_1.8rem_#000]',
-									'tablet768px:object-contain',
-								)}
-							/>
-						</div>
+						/>
 					</div>
 
 					<div
