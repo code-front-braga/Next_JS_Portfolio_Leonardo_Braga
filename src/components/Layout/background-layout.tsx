@@ -5,10 +5,10 @@ export default function BackgroundLayout() {
 				className="absolute inset-0 z-0 bg-repeat"
 				style={{
 					backgroundImage: "url('/bg-main.png')",
-					backgroundSize: '109px',
+					backgroundSize: '120px',
 				}}
 			/>
-			<div className="absolute inset-0 bg-[#040200] bg-opacity-[.92]" />
+			<div className="absolute inset-0 bg-[#000] bg-opacity-85" />
 		</>
 	);
 }
