@@ -43,10 +43,6 @@ export default function Home() {
 			<Head>
 				<title>Página Inicial | Leonardo Braga</title>
 				<meta name="description" content="Página Incial" />
-				<meta
-					name="viewport"
-					content="width=device-width, initial-scale=1 minimum-scale=1"
-				/>
 			</Head>
 
 			<section className="relative flex h-screen w-full">
@@ -75,7 +71,7 @@ export default function Home() {
 							src="/my-photo.png"
 							alt="Homem branco (Criador do site), cabelo breto e mão esquerda no queixo de aparência neutra."
 							className={clsx(
-								'absolute h-full w-full -translate-x-[10%] object-cover drop-shadow-[-.7rem_.6rem_1.8rem_#000]',
+								'fixed h-full w-full -translate-x-[10%] object-cover drop-shadow-[-.7rem_.6rem_1.8rem_#000]',
 								'tablet768px:object-contain',
 							)}
 						/>
