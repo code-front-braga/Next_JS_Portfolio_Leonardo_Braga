@@ -55,7 +55,7 @@ export default function Home() {
 				>
 					<div
 						className={clsx(
-							'relative z-0 h-[40%] w-[50%] overflow-hidden rounded-full bg-orangered outline outline-1 outline-offset-4 outline-orangered will-change-transform',
+							'relative z-0 h-[40%] w-[50%] transform-gpu overflow-hidden rounded-full bg-orangered outline outline-1 outline-offset-4 outline-orangered',
 							// slider['translate-z'],
 
 							'mobile414px:h-[36%] mobile414px:w-[64%]',
