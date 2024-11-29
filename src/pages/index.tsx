@@ -55,7 +55,7 @@ export default function Home() {
 				>
 					<div
 						className={clsx(
-							'relative h-[40%] w-[50%] z-0 overflow-hidden rounded-full bg-orangered',
+							'relative z-0 h-[40%] w-[50%] overflow-hidden rounded-full bg-orangered outline outline-1 outline-offset-4 outline-orangered will-change-transform',
 							// slider['translate-z'],
 
 							'mobile414px:h-[36%] mobile414px:w-[64%]',
@@ -73,7 +73,7 @@ export default function Home() {
 							src="/my-photo.png"
 							alt="Homem branco (Criador do site), cabelo breto e mão esquerda no queixo de aparência neutra."
 							className={clsx(
-								'absolute h-full w-full object-cover drop-shadow-[-.7rem_.6rem_1.8rem_#000]',
+								'fixed h-full w-full object-cover drop-shadow-[-.7rem_.6rem_1.8rem_#000]',
 								'tablet768px:object-contain',
 							)}
 						/>
