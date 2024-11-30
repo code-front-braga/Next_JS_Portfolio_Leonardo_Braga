@@ -8,6 +8,7 @@ import { useState } from 'react';
 import BurgerButton from './burger-button';
 import { useRouter } from 'next/router';
 import useScrollDetection from '../../lib/hooks/useScrollDetection';
+import style from '../../styles/header.module.css';
 
 export default function HeaderMobile() {
 	const [showMenu, setShowMenu] = useState<boolean>(false);
@@ -25,8 +26,8 @@ export default function HeaderMobile() {
 				'tablet960px:hidden',
 				{
 					'h-[100%] bg-[#0c0c0c] bg-opacity-90 backdrop-blur-sm': showMenu,
-					'bg-[#0c0c0c] bg-opacity-90 shadow-[0_2rem_2rem_#00000098]':
-						isScrolled && isProjectPage,
+
+					[style['little-balls']]: isScrolled && isProjectPage,
 					'bg-transparent': !isScrolled && !showMenu && !isProjectPage,
 				},
 			)}

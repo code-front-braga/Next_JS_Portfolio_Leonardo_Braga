@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { FaGithubAlt, FaLinkedin } from 'react-icons/fa';
 import { useRouter } from 'next/router';
 import useScrollDetection from '../../lib/hooks/useScrollDetection';
+import style from '../../styles/header.module.css'
 
 export default function HeaderDesktop() {
 	const router = useRouter();
@@ -15,7 +16,7 @@ export default function HeaderDesktop() {
 	return (
 		<header
 			className={clsx('fixed z-50 hidden w-full p-12', 'tablet960px:block', {
-				'bg-[#0c0c0c] bg-opacity-90 shadow-[0_2rem_2rem_#00000098]':
+				[style['little-balls']]:
 					isScrolled && isProjectPage,
 				'bg-transparent': !isScrolled && !isProjectPage,
 			})}
