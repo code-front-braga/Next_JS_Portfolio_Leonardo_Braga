@@ -65,7 +65,7 @@ export default function Modal({ onClose, isEmailSent, showModal }: ModalProps) {
 						Me dê um olá no whatsapp!
 					</span>
 					<Link
-						href={`https://wa.me//${process.env.PHONE_NUMBER}?text=Olá!%20Em%20de%20que%20posso%20ajudar%20?`}
+						href={`https://wa.me//5571985230428?text=Olá!%20Em%20de%20que%20posso%20ajudar%20?`}
 						target="_blank"
 					>
 						<FaWhatsapp size={28} className="text-social-zap" />
