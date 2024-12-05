@@ -1,4 +1,4 @@
 export const aboutMeContent = {
-	question: ['Quem', 'sou', 'eu', '?'],
+	question: 'Quem sou eu ?',
 	text: 'Eu me chamo Leonardo e tenho 33 anos. Descobri o universo da programação em meados de 2023, graças ao	meu querido irmão. Como todo iniciante (acredito eu), comecei com o ilustre Gustavo Guanabara, criador do Curso em Vídeo. A partir daí, não parei mais. Aprofundei-me em JavaScript, ingressei no	universo Frontend (JS, HTML e CSS) e, a cada dia que passava, percebia que esse era o meu mundo, que era isso que eu queria para a minha vida. Com o tempo, fui sentindo a necessidade de aprender mais – o mercado	exige aprendizado contínuo – e passei a conhecer outras tecnologias: ReactJS, NodeJS e TypeScript, por exemplo. Hoje, meu principal objetivo é ingressar na área de software, ser um engenheiro ou, quem sabe, um arquiteto de software. Mas acredito que é importante dar pequenos passos para chegar no topo, por	isso continuo focando no frontend e aprimorando cada vez mais minhas habilidades.',
 };

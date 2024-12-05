@@ -30,9 +30,7 @@ export default function About() {
 							'desktop1336px:text-end desktop1336px:text-8xl',
 						)}
 					>
-						{aboutMeContent.question.map(text => (
-							<span key={text}>{text}</span>
-						))}
+						{aboutMeContent.question}
 					</h2>
 					<p
 						className={clsx(
