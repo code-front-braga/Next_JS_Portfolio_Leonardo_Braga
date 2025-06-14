@@ -8,6 +8,8 @@ import iconNEXTJS from '../../../public/svg/next_icon.svg';
 import iconGITHUB from '../../../public/svg/github_icon.svg';
 import iconGIT from '../../../public/svg/git_icon.svg';
 import iconNEXT from '../../../public/svg/next_icon.svg';
+import iconPRISMA from '../../../public/svg/prisma_icon.svg';
+import iconPOSTGRESQL from '../../../public/svg/postgresql_icon.svg';
 
 export const icons = [
 	iconJS,
@@ -20,6 +22,8 @@ export const icons = [
 	iconGITHUB,
 	iconGIT,
   iconNEXT,
+  iconPRISMA,
+  iconPOSTGRESQL
 ];
 
 export {
@@ -33,6 +37,8 @@ export {
 	iconGITHUB,
 	iconGIT,
   iconNEXT,
+  iconPRISMA,
+  iconPOSTGRESQL
 };
 
 export const duplicateIcons = [...icons, ...icons];
