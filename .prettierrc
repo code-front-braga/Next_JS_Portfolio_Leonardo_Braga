@@ -10,6 +10,5 @@
 	"quoteProps": "as-needed",
 	"bracketSpacing": true,
 	"bracketSameLine": false,
-	"htmlWhitespaceSensitivity": "css",
-	"cursorOffset": -1
+	"htmlWhitespaceSensitivity": "css"
 }

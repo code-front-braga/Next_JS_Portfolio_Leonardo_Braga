@@ -37,13 +37,13 @@ export default function Projects() {
 					>
 						{projects.map(project => (
 							<ProjectCard
-								key={project.id}
-								id={project.id}
-								title={project.title}
-								src={project.src}
-								icons={project.icons}
-								linkDeploy={project.linkDeploy}
-								linkRepo={project.linkRepo}
+                key={project.id}
+                icons={project.icons}
+                id={project.id}
+                linkDeploy={project.linkDeploy}
+                linkRepo={project.linkRepo}
+                title={project.title}
+                src={project.src}
 							/>
 						))}
 					</div>

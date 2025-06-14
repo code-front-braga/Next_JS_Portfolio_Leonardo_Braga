@@ -7,6 +7,7 @@ import iconVSCODE from '../../../public/svg/vscode_icon.svg';
 import iconNEXTJS from '../../../public/svg/next_icon.svg';
 import iconGITHUB from '../../../public/svg/github_icon.svg';
 import iconGIT from '../../../public/svg/git_icon.svg';
+import iconNEXT from '../../../public/svg/next_icon.svg';
 
 export const icons = [
 	iconJS,
@@ -18,6 +19,7 @@ export const icons = [
 	iconNEXTJS,
 	iconGITHUB,
 	iconGIT,
+  iconNEXT,
 ];
 
 export {
@@ -30,6 +32,7 @@ export {
 	iconNEXTJS,
 	iconGITHUB,
 	iconGIT,
+  iconNEXT,
 };
 
 export const duplicateIcons = [...icons, ...icons];

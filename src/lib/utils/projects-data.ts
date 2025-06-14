@@ -7,6 +7,7 @@ import {
 	iconGITHUB,
 	iconVSCODE,
 	iconCSS,
+  iconNEXT,
 } from './icons';
 
 export const projects = [
@@ -74,4 +75,20 @@ export const projects = [
 		linkDeploy: 'https://pr-basic-calculator.vercel.app',
 		linkRepo: 'https://github.com/code-front-braga/PR-Basic_Calculator',
 	},
+  {
+    id: 'authtemp08',
+    title: 'Template de Cadastro e Login',
+    src: '/auth_template.png',
+    icons: [iconNEXT, iconJS, iconGIT, iconGITHUB, iconVSCODE],
+    linkDeploy: 'https://auth-template-zeta.vercel.app/auth',
+    linkRepo: 'https://github.com/code-front-braga/auth-template',
+  },
+  {
+    id: 'linkShorter09',
+    title: 'Encurtador de Link',
+    src: '/shorter.png',
+    icons: [iconNEXT, iconJS, iconGIT, iconGITHUB, iconVSCODE],
+    linkDeploy: 'https://link-shortener-phi-five.vercel.app',
+    linkRepo: 'https://github.com/code-front-braga/link-shortener',
+  },
 ];
