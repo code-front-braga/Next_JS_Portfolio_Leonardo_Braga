@@ -69,4 +69,12 @@ export const projects = [
     linkDeploy: 'https://currency-swift-chi.vercel.app',
     linkRepo: 'https://github.com/code-front-braga/e-listou',
   },
+  {
+    id: 'self-mc',
+    title: 'Self Checkout - Mc Donalds',
+    src: '/print_self_checkout.png',
+    icons: [iconNEXT, iconJS, iconGIT, iconGITHUB, iconVSCODE, iconPRISMA, iconPOSTGRESQL],
+    linkDeploy: 'https://fsc-self-checkout.vercel.app/fsw-donalds',
+    linkRepo: 'https://github.com/code-front-braga/fsc-self-checkout',
+  },
 ];

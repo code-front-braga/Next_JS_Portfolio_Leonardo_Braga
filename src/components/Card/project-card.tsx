@@ -22,13 +22,15 @@ export default function ProjectCard({ ...props }: ProjectCardProps) {
 			>
 				{props.title}
 			</h2>
+      <div className='w-[400px] h-[300px] relative'>
 			<Image
 				src={props.src}
-				alt=""
-				width={500}
-				height={500}
-				className="w-full border-2 border-solid border-white"
+				alt={props.title}
+        fill
+				className="object-contain w-full border-2 border-solid border-white"
 			/>
+
+      </div>
 			<div className="flex justify-center gap-3 rounded-md border p-2">
 				{props.icons.map((icon, index) => (
 					<Image
